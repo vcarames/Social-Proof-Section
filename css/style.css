@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+/* ************************** */
+/* VARIABLES */
+/* ************************** */
+
+:root {
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  --Verified: hsla(333, 80%, 67%, 0.8);
+  --Ratings-Hover: hsl(300, 49%, 47%);
+  --Star: hsl(51, 100%, 50%);
+  --Box-Shadow: hsla(300, 34%, 13%, 0.694);
+}
+
+/* ************************** */
+/* RESETS */
+/* ************************** */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ************************** */
+/* LAYOUT */
+/* ************************** */
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "League Spartan", sans-serif;
+  background-image: url(../images/bg-pattern-top-desktop.svg),
+    url(../images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  padding: 0.63rem;
+}
+
+main {
+  max-width: 90rem;
+}
+
+/* ************************** */
+/* TOP SECTION */
+/* ************************** */
+
+.top-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.13rem;
+  transition: 0.5s ease;
+  text-align: center;
+}
+
+.component-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.component-heading {
+  max-width: 31.25rem;
+  font-size: clamp(2.38rem, calc(1.93rem + 1.88vw), 3.63rem);
+  color: var(--Very-Dark-Magenta);
+  margin-right: 0;
+  margin-bottom: 1.25rem;
+  animation: gradient 10s linear infinite;
+  background: linear-gradient(
+    -60deg,
+    hsl(268, 78%, 57%),
+    hsl(333, 80%, 67%),
+    hsl(300, 43%, 22%)
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.component-paragraph {
+  color: var(--Dark-Grayish-Magenta);
+  max-width: 26.25rem;
+  font-size: clamp(1rem, calc(0.96rem + 0.19vw), 1.13rem);
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+
+/* ************************ */
+/* RATINGS */
+/* ************************ */
+
+.ratings-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  color: var(--Very-Dark-Magenta);
+  gap: 1.25rem;
+  margin-bottom: 0.63rem;
+}
+
+.ratings {
+  width: 18.75rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  gap: 1.25rem;
+  padding: 1.13rem 2rem;
+  border-radius: 0.38rem;
+  background: var(--Light-Grayish-Magenta);
+  transition: 0.5s ease;
+}
+
+.rating-one,
+.rating-two,
+.rating-three {
+  align-self: center;
+}
+
+.stars {
+  color: var(--Star);
+}
+
+/* ************************** */
+/* TESTIMONIALS */
+/* ************************** */
+
+.testimonial-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  transition: 0.5s ease;
+}
+
+.testimonial {
+  max-width: 21.88rem;
+  padding: 1.69rem;
+  color: var(--Light-Grayish-Magenta);
+
+  background: linear-gradient(
+    135deg,
+    hsla(300, 43%, 22%, 1) 0%,
+    hsla(300, 46%, 32%, 1) 100%
+  );
+
+  border-radius: 0.5rem;
+  box-shadow: 0 0.31rem 1.25rem var(--Box-Shadow);
+  transition: 0.5s ease;
+  filter: brightness(1.2);
+}
+
+.testimonial-one,
+.testimonial-two,
+.testimonial-three {
+  align-self: center;
+}
+
+.author-container {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.88rem;
+}
+
+.author-container img {
+  width: 2.63rem;
+  border-radius: 3.13rem;
+}
+
+.author-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.63rem;
+}
+
+.author-container span {
+  color: var(--Verified);
+}
+
+blockquote {
+  font-size: clamp(0.88rem, calc(0.83rem + 0.19vw), 1rem);
+  font-weight: 400;
+  line-height: 1.4;
+}

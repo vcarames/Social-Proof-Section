@@ -1,0 +1,82 @@
+@media (min-width: 75em) {
+  main {
+    padding: 2.5rem;
+  }
+  .top-component {
+    flex-direction: row;
+    text-align: start;
+    justify-content: space-between;
+  }
+
+  .component-heading {
+    margin-right: 3.13rem;
+  }
+
+  .component-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .ratings-container {
+    width: 31.25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ratings {
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.13rem 2rem;
+  }
+
+  .rating-one {
+    align-self: flex-start;
+  }
+
+  .rating-two {
+    align-self: center;
+  }
+
+  .rating-three {
+    align-self: flex-end;
+  }
+
+  .testimonial-component {
+    min-height: 16.25rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.88em;
+  }
+
+  .testimonial-one {
+    align-self: flex-start;
+  }
+
+  .testimonial-two {
+    align-self: center;
+  }
+
+  .testimonial-three {
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 48.13em) {
+  .ratings {
+    flex-direction: row;
+  }
+
+  .testimonial {
+    padding: 2.31rem;
+  }
+}
+
+@media (min-width: 25.63em) {
+  .ratings {
+    width: 25rem;
+  }
+}
